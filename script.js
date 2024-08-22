@@ -1,4 +1,4 @@
-const maxMenuScrollWithoutBackground = 400;
+const maxMenuScrollWithoutBackground = 100;
 let lastScrollY = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -8,17 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       lastScrollY <= maxMenuScrollWithoutBackground
     ) {
       document.getElementById("main-menu").classList.add("menu-scrolled");
-      // add padding top to show content behind navbar
-      // navbar_height = document.querySelector(".navbar").offsetHeight;
-      // document.body.style.paddingTop = navbar_height + "px";
     }
     if (
       window.scrollY <= maxMenuScrollWithoutBackground &&
       lastScrollY > maxMenuScrollWithoutBackground
     ) {
       document.getElementById("main-menu").classList.remove("menu-scrolled");
-      // remove padding top from body
-      // document.body.style.paddingTop = "0";
     }
     lastScrollY = window.scrollY;
   });
@@ -33,3 +28,19 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+function toggleMenu() {
+  const optionsElement = document.getElementById("main-menu-hamburger-options");
+  if (optionsElement?.classList?.contains("visible")) {
+    optionsElement.classList.remove("visible");
+  } else {
+    optionsElement.classList.add("visible");
+  }
+}
+
+function hideMenu() {
+  const optionsElement = document.getElementById("main-menu-hamburger-options");
+  if (optionsElement?.classList?.contains("visible")) {
+    optionsElement.classList.remove("visible");
+  }
+}

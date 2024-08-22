@@ -37,6 +37,28 @@
         <a class="menu-option" href="#zlecenia">Zlecenia</a>
       </div>
     </div>
+    <div id="main-menu-hamburger" class="main-menu-hamburger">
+      <div class="main-menu-hamburger-top">
+        <a href="#seltro_tech" onclick="hideMenu()"
+          ><img height="48px" src="./img/logo_white_horizontal_small.png"
+        /></a>
+        <div class="menu-hamburger" onclick="toggleMenu()">
+          <span class="material-symbols-rounded">menu</span>
+        </div>
+      </div>
+      <div id="main-menu-hamburger-options" class="main-menu-hamburger-options">
+        <a
+          class="menu-option menu-option-bold"
+          href="#kontakt"
+          onclick="hideMenu()"
+          >Kontakt</a
+        >
+        <a class="menu-option" href="#uslugi" onclick="hideMenu()">Usługi</a>
+        <a class="menu-option" href="#zlecenia" onclick="hideMenu()"
+          >Zlecenia</a
+        >
+      </div>
+    </div>
     <div id="seltro_tech" class="main-container">
       <div class="top-panel">
         <div class="main-image">
@@ -57,16 +79,8 @@
       </div>
 
       <div id="uslugi" class="details-panel">
-        <div
-          class="header-text"
-          style="margin-top: 32px; margin-bottom: 16px; text-align: center"
-        >
-          Usługi oraz Projekty
-        </div>
-        <div
-          class="card-subtitle card-subtitle-light"
-          style="margin-bottom: 128px; text-align: center"
-        >
+        <div class="details-header header-text">Usługi oraz Projekty</div>
+        <div class="details-subheader card-subtitle card-subtitle-light">
           Każdy zlecenie jest unikalne, w celu wyceny prosimy o kontakt
         </div>
         <div class="details">
