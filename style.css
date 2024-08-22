@@ -731,6 +731,7 @@ body {
 
   .contact-panel {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .detail-outlined {
