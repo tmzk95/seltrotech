@@ -745,7 +745,7 @@ body {
   }
 
   .main-header {
-    font-size: var(--size-xl);
+    font-size: var(--size-l);
   }
 
   .main-subheader {
