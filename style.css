@@ -756,4 +756,18 @@ body {
   .details-panel .details .detail {
     min-width: 0px;
   }
+
+  .contact-panel {
+    padding: var(--size-xl) var(--size-xs);
+  }
+}
+
+@media (max-width: 500px) {
+  .main-header {
+    font-size: var(--size-m);
+  }
+
+  .main-subheader {
+    font-size: var(--size-s);
+  }
 }
