@@ -1,7 +1,19 @@
 const maxMenuScrollWithoutBackground = 100;
 let lastScrollY = 0;
 
+function setupLogger() {
+  const loggers = document.getElementsByClassName("logger");
+
+  if (loggers?.length === 2) {
+    loggers[0].innerHTML = window.innerWidth;
+    loggers[1].innerHTML = window.innerWidth;
+  }
+  setTimeout(() => setupLogger(), 1000);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  setupLogger();
+
   window.addEventListener("scroll", function () {
     if (
       window.scrollY > maxMenuScrollWithoutBackground &&
