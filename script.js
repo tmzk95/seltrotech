@@ -1,5 +1,14 @@
 const maxMenuScrollWithoutBackground = 100;
+const detailsTimeout = 3000;
+
 let lastScrollY = 0;
+let firstVisibleDetailLeft = 2;
+let firstVisibleDetailRight = 1;
+let detailsLength = 0;
+let detailsTimeoutId;
+let details;
+let detailsPanel;
+let maxItemsLength;
 
 function setupLogger() {
   const loggers = document.getElementsByClassName("logger");
@@ -8,11 +17,65 @@ function setupLogger() {
     loggers[0].innerHTML = window.innerWidth;
     loggers[1].innerHTML = window.innerWidth;
   }
-  setTimeout(() => setupLogger(), 1000);
+  setTimeout(() => setupLogger(), detailsTimeout);
+}
+
+function setupDetails() {
+  details = document.getElementsByClassName("detail");
+  detailsPanel = document.getElementsByClassName("details")[0];
+
+  moveDetails("LEFT");
+}
+
+function moveDetails(direction) {
+  clearTimeout(detailsTimeoutId);
+  maxItemsLength = Math.floor((window.innerWidth - 440) / 300);
+  detailsLength = details.length;
+  if (direction === "RIGHT") {
+    moveDetailsRight();
+  } else {
+    moveDetailsLeft();
+  }
+  detailsTimeoutId = setTimeout(() => moveDetails("LEFT"), detailsTimeout);
+}
+
+function moveDetailsLeft() {
+  if (detailsLength) {
+    for (let i = 0; i < details.length; i++) {
+      const detail = details.item(i);
+      if (
+        i < firstVisibleDetailLeft ||
+        i > firstVisibleDetailLeft + maxItemsLength
+      ) {
+        detail.classList.remove("visible-detail");
+      } else {
+        detail.classList.add("visible-detail");
+      }
+    }
+    detailsPanel.append(details.item(0));
+  }
+}
+
+function moveDetailsRight() {
+  if (detailsLength) {
+    detailsPanel.prepend(details.item(detailsLength - 1));
+    for (let i = 0; i < details.length; i++) {
+      const detail = details.item(i);
+      if (
+        i < firstVisibleDetailRight ||
+        i > firstVisibleDetailRight + maxItemsLength
+      ) {
+        detail.classList.remove("visible-detail");
+      } else {
+        detail.classList.add("visible-detail");
+      }
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   setupLogger();
+  setupDetails();
 
   window.addEventListener("scroll", function () {
     if (
