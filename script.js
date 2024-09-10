@@ -29,7 +29,7 @@ function setupDetails() {
 
 function moveDetails(direction) {
   clearTimeout(detailsTimeoutId);
-  maxItemsLength = Math.max(Math.floor((window.innerWidth - 440) / 300), 1);
+  maxItemsLength = Math.max(Math.floor((window.innerWidth - 440) / 300), 0);
   detailsLength = details.length;
   if (direction === "RIGHT") {
     moveDetailsRight();
