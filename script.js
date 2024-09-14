@@ -125,11 +125,17 @@ document.addEventListener("DOMContentLoaded", function () {
           const description = allDescriptions.item(i);
           description.classList.remove("visible");
           description.classList.remove("faq-description-clicked");
+          description.classList.remove("faq-description-clicked-2");
         }
       }
       if (descriptions.length) {
         descriptions[0].classList.add("visible");
-        descriptions[0].classList.add("faq-description-clicked");
+        descriptions[0].classList.add("faq-description-clicked-2");
+
+        setTimeout(
+          () => descriptions[0].classList.add("faq-description-clicked"),
+          0
+        );
       }
       if (titles.length) {
         titles[0].classList.add("faq-title-clicked");
