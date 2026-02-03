@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -26,6 +26,128 @@
     <title>Seltro Tech</title>
   </head>
   <body>
+    <div class="modal hide" id="modal-installations" onclick="hideModals()">
+      <div class="modal-content">
+        <div class="modal-tile">
+          <div class="tile-info">
+            <div class="tile-title">Instalacje elektryczne</div>
+            <div class="card-subtitle">
+              <div class="card-text">Nowe instalacje elektryczne</div>
+              <div class="card-text">
+                Wymiany, modernizacje i adaptacje istniejących instalacji
+              </div>
+              <div class="card-text">
+                Pomiary odbiorcze i okresowe instalacji elektrycznych
+              </div>
+              <div class="card-text">
+                Wymiany tablic bezpiecznikowych i licznikowych
+              </div>
+              <div class="card-text">Naprawa awarii instalacji</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide" id="modal-smart-home" onclick="hideModals()">
+      <div class="modal-content">
+        <div class="modal-tile">
+          <div class="tile-info">
+            <div class="tile-title">Smart Home</div>
+            <div class="card-subtitle">
+              <div class="card-text">
+                Oferujemy sprawdzony system instalacji inteligentnej złożony z:
+              </div>
+              <div class="card-points">
+                <div class="card-text card-text-light">
+                  - Serwera domowego Home Assistant
+                </div>
+                <div class="card-text card-text-light">
+                  - Modułów wykonawczych w puszkach instalacyjnych
+                </div>
+                <div class="card-text card-text-light">
+                  - Modułów przekaźnikowych
+                </div>
+                <div class="card-text card-text-light">- Paneli dotykowych</div>
+              </div>
+              <div class="card-text">
+                Home Assistant umożliwia wykorzystanie instalacji alarmowej w
+                systemie inteligentnym, oraz połączenie urządzeń różnych
+                producentów.
+              </div>
+              <div class="card-text">
+                Pełna lista producentów i urządzeń kompatybilnych z Home
+                Assistant
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide" id="modal-monitoring" onclick="hideModals()">
+      <div class="modal-content">
+        <div class="modal-tile">
+          <div class="tile-info">
+            <div class="tile-title">Alarm, monitoring, wideodomofony</div>
+            <div class="card-subtitle">
+              <div class="card-text">Montaż monitoringu marki Novus</div>
+              <div class="card-text">Wideodomofony Novus</div>
+              <div class="card-text">Systemy alarmowe Satel</div>
+              <div class="card-text">
+                Montaż i uruchomienie systemu monitoringu marki Novus obsługuje
+                takie funkcje jak:
+              </div>
+              <div class="card-points">
+                <div class="card-text card-text-light">
+                  - Wykrywanie obecności ludzi/samochodów/jednośladów w
+                  zaznaczonym obszarze lub przekroczenia linii.
+                </div>
+                <div class="card-text card-text-light">
+                  - Wykrywanie i zapisywanie tablic rejestracyjnych
+                </div>
+                <div class="card-text card-text-light">
+                  -rozpoznawanie twarzy
+                </div>
+                <div class="card-text card-text-light">
+                  - Inteligentna analiza nagrania. Przeszukiwanie zapisu na
+                  podstawie cech jak: płeć, postura, kolory ubrań itp.
+                </div>
+                <div class="card-text card-text-light">
+                  - Funkcje alarmowe. Włączenie oświetlenia, komunikaty głosowe,
+                  wiadomości o naruszeniu.
+                </div>
+                <div class="card-text card-text-light">
+                  - Możliwość wysłania sygnału o aktywowanym alarmie do centrali
+                  alarmowej.
+                </div>
+              </div>
+              <div class="card-text">Wykonujemy systemy alarmowe Satel:</div>
+              <div class="card-points">
+                <div class="card-text card-text-light">
+                  - Czujki ruchu, czujniki otwarcia okien i drzwi, czujniki wody
+                  oraz gazu.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal hide" id="modal-lan" onclick="hideModals()">
+      <div class="modal-content">
+        <div class="modal-tile">
+          <div class="tile-info">
+            <div class="tile-title">Sieci LAN i światłowody</div>
+            <div class="card-subtitle">
+              <div class="card-text">Oferujemy wykonanie instalacji LAN.</div>
+              <div class="card-text">
+                Punktem centralnym naszej sieci jest szafa rack umożliwiająca
+                instalację urządzeń sieciowych i monitoringu.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="main-menu" class="main-menu">
       <a href="#seltro_tech"
         ><img height="48px" src="./img/logo_white_horizontal_small.png"
@@ -33,7 +155,7 @@
       <div class="main-menu-options">
         <a class="menu-option" href="#kontakt">Kontakt</a>
         <a class="menu-option" href="#uslugi">Usługi</a>
-        <a class="menu-option" href="#zlecenia">Zlecenia</a>
+        <a class="menu-option" href="#zlecenia">Formularz do druku</a>
       </div>
     </div>
     <div id="main-menu-hamburger" class="main-menu-hamburger">
@@ -54,7 +176,7 @@
         >
         <a class="menu-option" href="#uslugi" onclick="hideMenu()">Usługi</a>
         <a class="menu-option" href="#zlecenia" onclick="hideMenu()"
-          >Zlecenia</a
+          >Formularz do druku</a
         >
       </div>
     </div>
@@ -73,7 +195,7 @@
 
       <div class="services-panel">
         <div class="services-row row-up">
-          <div class="top-panel-tile">
+          <div class="top-panel-tile" onclick="openModalInstallations()">
             <div class="tile-img img-1"></div>
             <div class="tile-info">
               <div class="tile-title">Instalacje elektryczne</div>
@@ -92,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="top-panel-tile">
+          <div class="top-panel-tile" onclick="openModalSmartHome()">
             <div class="tile-info">
               <div class="tile-title">Smart Home</div>
               <div class="card-subtitle">
@@ -100,12 +222,20 @@
                   Oferujemy sprawdzony system instalacji inteligentnej złożony
                   z:
                 </div>
-                <div class="card-text">- Serwera domowego Home Assistant</div>
-                <div class="card-text">
-                  - Modułów wykonawczych w puszkach instalacyjnych
+                <div class="card-points">
+                  <div class="card-text card-text-light">
+                    - Serwera domowego Home Assistant
+                  </div>
+                  <div class="card-text card-text-light">
+                    - Modułów wykonawczych w puszkach instalacyjnych
+                  </div>
+                  <div class="card-text card-text-light">
+                    - Modułów przekaźnikowych
+                  </div>
+                  <div class="card-text card-text-light">
+                    - Paneli dotykowych
+                  </div>
                 </div>
-                <div class="card-text">- Modułów przekaźnikowych</div>
-                <div class="card-text">- Paneli dotykowych</div>
                 <!-- <div class="card-text">
                   Home Assistant umożliwia wykorzystanie instalacji alarmowej w
                   systemie inteligentnym, oraz połączenie urządzeń różnych
@@ -121,7 +251,7 @@
           </div>
         </div>
         <div class="services-row row-bottom">
-          <div class="top-panel-tile">
+          <div class="top-panel-tile" onclick="openModalMonitoring()">
             <div class="tile-img img-3"></div>
             <div class="tile-info">
               <div class="tile-title">Alarm, monitoring, wideodomofony</div>
@@ -161,7 +291,7 @@
               </div>
             </div>
           </div>
-          <div class="top-panel-tile">
+          <div class="top-panel-tile" onclick="openModalLan()">
             <div class="tile-info">
               <div class="tile-title">Sieci LAN i światłowody</div>
               <div class="card-subtitle">
@@ -443,12 +573,52 @@
         </div>
       </div>
 
-      <div id="zlecenia" class="jobs-panel"></div>
+      <div id="zlecenia" class="jobs-panel">
+        <div class="form-container">
+          <div class="tile-title form-header">
+            <div>Formularz z listą obwodów</div>
+            <div class="form-subheader"></div>
+          </div>
+          <div class="form-body">
+            <div class="form-body-left"></div>
+            <div class="form-body-right"></div>
+          </div>
+          <div class="button-container">
+            <div class="main-button" onclick="printForm()">Wydrukuj</div>
+          </div>
+        </div>
+      </div>
       <div id="kontakt" class="contact-panel">
         <div class="contact-info">
-          <div class="header-text" style="margin-bottom: 32px">Kontakt</div>
-          <div style="width: 300px">
-            Staramy się zawsze być do dyspozycji klienta, niezależnie od pory.
+          <div class="header-text" style="margin-bottom: 32px">O mnie</div>
+          <div class="bio">
+            <div>
+              Jestem elektrykiem z wykształcenia i praktykiem z pasji.
+              Ukończyłem studia na Wydziale Elektrycznym Politechniki
+              Lubelskiej. Od 2015 roku zawodowo zajmuję się instalacjami
+              elektrycznymi oraz szeroko pojętą automatyką - od klasycznej
+              elektryki, przez automatykę budynkową, po automatykę przemysłową.
+            </div>
+            <div>
+              Na przestrzeni lat zdobywałem doświadczenie zarówno przy
+              realizacjach mieszkaniowych, jak i bardziej złożonych projektach
+              technicznych. Specjalizuję się w nowoczesnych instalacjach
+              elektrycznych, systemach smart home, sieciach LAN, a także
+              instalacjach alarmowych. Łączę wiedzę inżynierską z praktycznym
+              podejściem do potrzeb użytkownika - tak, aby instalacje były nie
+              tylko poprawne technicznie, ale też funkcjonalne, bezpieczne i
+              przyszłościowe.
+            </div>
+            <div>
+              W swojej pracy stawiam na jakość, przemyślane rozwiązania oraz
+              rzetelne doradztwo. Lubię wyzwania i projekty, w których
+              technologia realnie ułatwia codzienne życie.
+            </div>
+            <div>
+              Jeżeli interesuje Cię sprawdzony elektryk w Lublinie, który łączy
+              wiedzę inżynierską z praktycznym podejściem do nowoczesnych
+              technologii – zapraszam do kontaktu.
+            </div>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 24px">
@@ -481,4 +651,16 @@
     </div>
     <script src="script.js"></script>
   </body>
+  <div class="print-only">
+    <div class="print-container">
+      <div class="tile-title form-header">
+        <div>Formularz z listą obwodów</div>
+        <div class="form-subheader"></div>
+      </div>
+      <div class="print-body">
+        <div class="print-body-left"></div>
+        <div class="print-body-right"></div>
+      </div>
+    </div>
+  </div>
 </html>
