@@ -585,7 +585,7 @@ body {
   padding: 48px;
   font-family: "Exo 2", sans-serif;
   flex: 1;
-  width: 60%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   border-radius: var(--size-xs);
@@ -637,6 +637,7 @@ body {
   flex-direction: column;
   transition: 0.3s;
   margin-left: 24px;
+  max-width: 400px;
 }
 
 .visibility-hidden {
@@ -1242,7 +1243,7 @@ body {
 
 @media (max-width: 1660px) {
   .form-container {
-    width: 80%;
+    max-width: 80%;
   }
 
   .tile-img {
@@ -1261,7 +1262,7 @@ body {
 
 @media (max-width: 1400px) {
   .form-container {
-    width: 80%;
+    max-width: 85%;
   }
 
   .services-row {
